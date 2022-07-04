@@ -23,7 +23,9 @@
     },
     "dependencies": {
         "bootstrap": "^4.6.1",
+        "china-area-data": "^5.0.1",
         "jquery": "^3.6.0",
-        "popper.js": "^1.16.1"
+        "popper.js": "^1.16.1",
+        "sweetalert": "^2.1.2"
     }
 }

@@ -2,14 +2,13 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use App\Models\UserAddress;
 use Illuminate\Database\Seeder;
+use App\Models\UserAddress;
 
 class UserAddressTableSeeder extends Seeder
 {
     public function run()
     {
-        UserAddress::factory()->count(5)->create();
+        UserAddress::factory()->count(10)->create();
     }
 }
