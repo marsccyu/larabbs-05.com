@@ -14,20 +14,27 @@ class UserFactory extends Factory
      */
     public function definition()
     {
+        $addresses = [
+            ["北京市", "市辖区", "东城区"],
+            ["河北省", "石家庄市", "长安区"],
+            ["江苏省", "南京市", "浦口区"],
+            ["江苏省", "苏州市", "相城区"],
+            ["广东省", "深圳市", "福田区"],
+        ];
+        $address   = $this->faker->randomElement($addresses);
+
         return [
-            'name' => $this->faker->name(),
-            'email' => $this->faker->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-            'remember_token' => Str::random(10),
+            'user_id'       => 1,
+            'province'      => $address[0],
+            'city'          => $address[1],
+            'district'      => $address[2],
+            'address'       => sprintf('第%d街道第%d号', $this->faker->randomNumber(2), $this->faker->randomNumber(3)),
+            'zip'           => $this->faker->postcode,
+            'contact_name'  => $this->faker->name,
+            'contact_phone' => $this->faker->phoneNumber,
         ];
     }
 
-    /**
-     * Indicate that the model's email address should be unverified.
-     *
-     * @return \Illuminate\Database\Eloquent\Factories\Factory
-     */
     public function unverified()
     {
         return $this->state(function (array $attributes) {
