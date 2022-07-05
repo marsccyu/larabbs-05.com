@@ -7,16 +7,16 @@
             <div class="card panel-default">
                 <div class="card-header">
                     Addresses
-                    <a href="{{ route('user_addresses.create') }}" class="float-right">新增收货地址</a>
+                    <a href="{{ route('user_addresses.create') }}" class="float-right">新增地址</a>
                 </div>
                 <div class="card-body">
                     <table class="table table-bordered table-striped">
                         <thead>
                         <tr>
-                            <th>收货人</th>
+                            <th>收貨人</th>
                             <th>地址</th>
-                            <th>邮编</th>
-                            <th>电话</th>
+                            <th>郵遞區號</th>
+                            <th>電話</th>
                             <th>操作</th>
                         </tr>
                         </thead>
