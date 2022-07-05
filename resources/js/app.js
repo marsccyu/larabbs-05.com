@@ -7,7 +7,8 @@
 require('./bootstrap');
 
 window.Vue = require('vue').default;
-
+import $ from 'jquery';
+window.$ = window.jQuery = $;
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -27,6 +28,8 @@ window.Vue = require('vue').default;
  */
 require('./components/SelectDistrict');
 require('./components/UserAddressesCreateAndEdit');
+
 const app = new Vue({
     el: '#app',
 });
+
