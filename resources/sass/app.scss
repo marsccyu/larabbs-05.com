@@ -64,7 +64,7 @@ body {
     }
 }
 
-.products-index-page {
+.products-index-page, .products-favorites-page {
     .products-list {
         padding: 0 15px;
         .product-item {
@@ -131,6 +131,7 @@ body {
         border-bottom: 1px solid #eee;
     }
 }
+
 .products-show-page {
     .cover {
         width: 100%;
